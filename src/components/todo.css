@@ -1,0 +1,84 @@
+.todo-container {
+    min-height: 600px;
+    width:600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+    border: 1px solid lightgrey;
+    background-color: white;
+}
+
+.header
+{
+    text-align: center;
+    margin:1em;
+}
+
+.header h4
+{
+    font-family:'Roboto';
+    font-weight: 500;
+    font-size: 20px;
+
+}
+
+/***********  ToDo Form   ***************/
+
+.todo-form-container{
+    width:100%;
+    display: flex;
+    flex-direction: column;
+ 
+   
+}
+
+.todo-form{
+
+display: flex;
+
+}
+
+.form-input{
+   padding: 0.6em;
+   flex:1;
+   margin-right: 10px;
+   text-indent: 2px;
+   border-radius: 5px;
+   border: 1px solid lightgrey;
+   outline: none;
+}
+.addtask-btn,.clear-btn{
+    padding: 0.7em;
+    font-size: 1rem;
+    border: none;
+    outline:none;
+    cursor:pointer;
+    border-radius: 8px;
+    background-color: cornflowerblue;
+    color: white;
+
+}
+
+/*************   Todo  Lists Styling   ******************/
+
+.todo-list-container{
+    flex:0.6;
+    width:100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin:2em 0em;
+}
+.list{
+    display: flex;
+    width: 100%;
+    margin:1em;
+}
+p{
+    flex:1;
+}
+.icon-list{
+    display: flex;
+    justify-content: space-evenly;
+}
