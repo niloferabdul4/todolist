@@ -6,11 +6,11 @@ import DeleteIcon from '@mui/icons-material/Delete';
 const TodoList = () => {
    
     const {input,todos,setInput,setEditTask,setTodos}=useContext(TodoContext)
-    const handleEdit = (idToRemove) => {
-        
+    const handleEdit = (idToRemove) => {        
         setEditTask(true)
         const updatedTasks=todos.filter((item)=>item.id!==idToRemove)
         setTodos(updatedTasks)
+
     }
     return (
         <div className='todo-list-container'>
