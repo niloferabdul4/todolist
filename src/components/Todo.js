@@ -4,7 +4,9 @@ import TodoList from './TodoList'
 import './todo.css'
 import Header from './Header'
 import Footer from './Footer'
+
 const Todo = () => {
+
     return (
         <>
             <div className="todo-container">

@@ -13,20 +13,28 @@ const TodoForm = () => {
     }
 
     const handleSubmit = (e) => {
-        // const updatedList=(prevList=>([...prevList,{input,id:Date.now()}]))
         e.preventDefault()
-        if (input) {
+        if (input.trim() !== '') {
             const updated = [...todos, { todo: input, id: Date.now() }]
             setTodos(updated)
+            setInput('')
         }
-        setInput('')
+
+    }
+    const handleEnter = (e) => {
+
+        if (e.key === 'Enter') {
+            handleSubmit();
+        }
+
+
     }
     return (
         <>
             <div className="todo-form-container">
                 <form className="todo-form" onSubmit={handleSubmit}>
-                    <input ref={inputRef} type="text" className="form-input" placeholder='Enter a todo' onChange={handleChange} />
-                    <button className="addtask-btn" type='submit'>{setEditTask === true ? 'Update' : 'Add Task'}</button>
+                    <input ref={inputRef} value={input} type="text" className="form-input" placeholder='Enter a todo' onChange={handleChange} />
+                    <button className="addtask-btn" type='submit' onKeyDown={handleEnter}>{setEditTask === true ? 'Update' : 'Add Task'}</button>
                 </form>
             </div>
         </>
