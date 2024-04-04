@@ -92,3 +92,17 @@ p{
 .delete-icon,.edit-icon{
 cursor: pointer;
 }
+
+/*********mobiles   *******/
+@media only screen and (max-width:600px){
+.todo-container{
+    width:100%;
+}
+}
+
+/***********  tablets and large phones  ***********/
+@media only screen and (min-width:601px) and(max-width:768px){
+    .todo-container{
+        width:60%;
+    }
+}
